@@ -140,31 +140,192 @@
 // const totals=[bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]];
 // console.log(totals);
 
+// const jonas={
+//     firstName:'Jonas',
+//     lastName:'Schmedtmann',
+//     age:2037-1991,
+//     job:'teacher',
+//     friends:['Michael','Peter','Steven']
+// };
+// console.log(jonas);
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
+// const nameKey='Name';
+// console.log(jonas['first'+nameKey]);
+// console.log(jonas['last'+nameKey]);
+// const interestedIn=prompt('What do you want to know about Jonas? Choose between firstName,lastName,age,job,and friends');
+// console.log(jonas[interestedIn]);
+// if(jonas[interestedIn]){
+//     console.log(jonas[interestedIn]);
+// }else{
+//     console.log('Wrong request! Choose between firstName,lastName,age,job,and friends');
+// }
+
+// jonas.location='Portugal';
+// jonas['twitter']='@jonasschmedtman';
+// console.log(jonas);
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends,and his best friend is called ${jonas.friends[0]}`);
+
 const jonas={
     firstName:'Jonas',
     lastName:'Schmedtmann',
-    age:2037-1991,
+    birthYear:1991,
     job:'teacher',
-    friends:['Michael','Peter','Steven']
+    friends:['Michael','Peter','Steven'],
+    hasDriversLicense:true,
+    // calcAge:function (birthYear) {
+    //     return 2037-birthYear;
+    // }
+    // calcAge:function () {
+    //     // console.log(this);
+    //     return 2037-this.birthYear;
+    // }
+    calcAge:function () {
+        this.age=2037-this.birthYear;
+        return this.age;
+    },
+    getSummary:function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job},and he has ${this.hasDriversLicense?'a':'no'} driver's license`;
+    }
 };
-console.log(jonas);
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
-const nameKey='Name';
-console.log(jonas['first'+nameKey]);
-console.log(jonas['last'+nameKey]);
-const interestedIn=prompt('What do you want to know about Jonas? Choose between firstName,lastName,age,job,and friends');
-console.log(jonas[interestedIn]);
-if(jonas[interestedIn]){
-    console.log(jonas[interestedIn]);
-}else{
-    console.log('Wrong request! Choose between firstName,lastName,age,job,and friends');
+console.log(jonas.calcAge());
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.getSummary());
+
+const markMiller={
+    fullName:'Mark Miller',
+    mass:78,
+    height:1.69,
+    calcBMI:function () {
+        this.bmi=this.mass/(this.height**2);
+        return this.bmi;
+    }
+};
+const johnSmith={
+    fullName:'John Smith',
+    mass:92,
+    height:1.95,
+    calcBMI:function () {
+        this.bmi=this.mass/(this.height**2);
+        return this.bmi;
+    }
+};
+markMiller.calcBMI();
+johnSmith.calcBMI();
+console.log(markMiller.bmi,johnSmith.bmi);
+if(markMiller.bmi>johnSmith.bmi){
+    console.log(`${markMiller.fullName}'s BMI (${markMiller.bmi}) is higher than ${johnSmith.fullName}'s BMI (${johnSmith.bmi})`);
+}else if(johnSmith.bmi>markMiller.bmi){
+    console.log(`${johnSmith.fullName}'s BMI (${johnSmith.bmi}) is higher than ${markMiller.fullName}'s BMI (${markMiller.bmi})`);
 }
 
-jonas.location='Portugal';
-jonas['twitter']='@jonasschmedtman';
-console.log(jonas);
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends,and his best friend is called ${jonas.friends[0]}`);
+for(let rep=1;rep<=10;rep++){
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+const jonasArray=[
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael','Peter','Steven'],
+    true
+];
+const types=[];
+for(let i=0;i<jonasArray.length;i++){
+    console.log(jonasArray[i],typeof jonasArray[i]);
+    types[i]=typeof jonasArray[i];
+}
+console.log(types);
+const years=[1991,2007,1969,2020];
+const ages=[];
+for(let i=0;i<years.length;i++){
+    ages.push(2037-years[i]);
+}
+console.log(ages);
+console.log('---ONLY STRINGS---');
+for(let i=0;i<jonasArray.length;i++){
+    if(typeof jonasArray[i]!=='string')continue;
+    console.log(jonasArray[i],typeof jonasArray[i]);
+}
+console.log('---BREAK WITH NUMBER---');
+for(let i=0;i<jonasArray.length;i++){
+
+    if(typeof jonasArray[i]===typeof 23)break;
+    console.log(jonasArray[i],typeof jonasArray[i]);
+}
+
+const jonasArray=[
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael','Peter','Steven'],
+    true
+];
+for(let i=jonasArray.length-1;i>=0;i--){
+    console.log(i,jonasArray[i]);
+}
+for(let exercise=1;exercise<4;exercise++){
+    console.log(`--------Starting exercise ${exercise}`);
+    for(let rep=1;rep<6;rep++){
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+    }
+}
+
+for(let rep=1;rep<=10;rep++){
+    console.log(`Lifting weights repetition ${rep}`);
+}
+let rep=1;
+while(rep<=10){
+    console.log(`WHILE:Lifting weights repetition ${rep}`);
+    rep++;
+}
+let dice=Math.trunc(Math.random()*6)+1;
+console.log(dice);
+while(dice!==6){
+    console.log(`You rolled a ${dice}`);
+    dice=Math.trunc(Math.random()*6)+1;
+    if(dice===6)console.log('Loop is about to end...');
+}
+
+const calcTip=function (bill) {
+    return bill>=50&&bill<=300?bill*0.15:bill*0.2;
+}
+const bills=[125,555,44];
+const tips=[calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+const totals=[bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]];
+console.log(bills,tips,totals);
+const jonas={
+    firstName:'Jonas',
+    lastName:'Schmedtmann',
+    birthYear:1991,
+    job:'teacher',
+    friends:['Michael','Peter','Steven'],
+    hasDriversLicense:true,
+    // calcAge:function (birthYear) {
+    //     return 2037-birthYear;
+    // }
+    // calcAge:function () {
+    //     // console.log(this);
+    //     return 2037-this.birthYear;
+    // }
+    calcAge:function () {
+        this.age=2037-this.birthYear;
+        return this.age;
+    }
+};
+console.log(jonas.calcAge());
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.getSummary());
+
+
+
+
 
 
 
