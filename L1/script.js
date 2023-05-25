@@ -25,4 +25,13 @@
 //     console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}`);
 // }
 
+let tip= 500;
+// if(tip>=50 && tip<=300){
+//     console.log(`The bill was ${tip}, the tip was ${tip*0.15} and the total value ${tip*1.15}`);
+// }
+// else{
+//     console.log(`The bill was ${tip}, the tip was ${tip*0.2} and the total value ${tip*1.2}`);
+// }
+tip>=50 && tip<=300?console.log(`The bill was ${tip}, the tip was ${tip*0.15} and the total value ${tip*1.15}`):console.log(`The bill was ${tip}, the tip was ${tip*0.2} and the total value ${tip*1.2}`);
+
 
