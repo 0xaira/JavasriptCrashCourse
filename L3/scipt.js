@@ -225,7 +225,7 @@ for(let rep=1;rep<=10;rep++){
     console.log(`Lifting weights repetition ${rep}`);
 }
 
-const jonasArray=[
+const jonasArrayy=[
     'Jonas',
     'Schmedtmann',
     2037-1991,
@@ -234,9 +234,9 @@ const jonasArray=[
     true
 ];
 const types=[];
-for(let i=0;i<jonasArray.length;i++){
-    console.log(jonasArray[i],typeof jonasArray[i]);
-    types[i]=typeof jonasArray[i];
+for(let i=0;i<jonasArrayy.length;i++){
+    console.log(jonasArrayy[i],typeof jonasArrayy[i]);
+    types[i]=typeof jonasArrayy[i];
 }
 console.log(types);
 const years=[1991,2007,1969,2020];
@@ -246,18 +246,18 @@ for(let i=0;i<years.length;i++){
 }
 console.log(ages);
 console.log('---ONLY STRINGS---');
-for(let i=0;i<jonasArray.length;i++){
-    if(typeof jonasArray[i]!=='string')continue;
-    console.log(jonasArray[i],typeof jonasArray[i]);
+for(let i=0;i<jonasArrayy.length;i++){
+    if(typeof jonasArrayy[i]!=='string')continue;
+    console.log(jonasArrayy[i],typeof jonasArrayy[i]);
 }
 console.log('---BREAK WITH NUMBER---');
-for(let i=0;i<jonasArray.length;i++){
+for(let i=0;i<jonasArrayy.length;i++){
 
-    if(typeof jonasArray[i]===typeof 23)break;
-    console.log(jonasArray[i],typeof jonasArray[i]);
+    if(typeof jonasArrayy[i]===typeof 23)break;
+    console.log(jonasArrayy[i],typeof jonasArrayy[i]);
 }
 
-const jonasArray=[
+const jonasArrayy=[
     'Jonas',
     'Schmedtmann',
     2037-1991,
@@ -265,8 +265,8 @@ const jonasArray=[
     ['Michael','Peter','Steven'],
     true
 ];
-for(let i=jonasArray.length-1;i>=0;i--){
-    console.log(i,jonasArray[i]);
+for(let i=jonasArrayy.length-1;i>=0;i--){
+    console.log(i,jonasArrayy[i]);
 }
 for(let exercise=1;exercise<4;exercise++){
     console.log(`--------Starting exercise ${exercise}`);
