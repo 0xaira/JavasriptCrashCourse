@@ -6,3 +6,8 @@ let accountAge = null;
 let accountAddress;
 console.log(account_name, accountID, accountBalance, accountActive, accountAge, accountAddress);
 console.table({ account_name, accountID, accountBalance, accountActive, accountAge, accountAddress });
+
+/*
+Prefer not to use var
+because of issue in block scope and functional scope
+*/
