@@ -85,4 +85,41 @@ console.log(Object.values(marvel_heros));
 console.log(Object.entries(marvel_heros));
 console.log(dc_heros.hasOwnProperty('superman'));
 
+const company = {
+    name: 'Velocity-X',
+    address: {
+        city: 'Bangalore',
+        state: 'Karnataka',
+        country: 'India',
+    },
+    ipo: '2021-07-07T09:44:27.000Z',
+    employees: [
+        {
+            name: 'John',
+            age: 30,
+            hobbies: ['Coding', 'Cricket', 'Gaming'],
+            isOnline: true,
+            lastSeen: '2021-07-07T09:44:27.000Z',
+        },
+    ],
+
+
+}
+console.log(company);
+
+const { name, address, ipo, employees } = company;
+console.log(name);
+
+//JSON - JavaScript Object Notation
+//JSON is a syntax for storing and exchanging data.
+//JSON is text, written with JavaScript object notation.
+//JSON is a lightweight data-interchange format.
+//JSON is language independent *
+//JSON is "self-describing" and easy to understand *
+//JSON is built on two structures:
+//A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+//An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.
+//JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language.
+
+
 
