@@ -18,3 +18,30 @@ test();
 // Global Scope defination
 // A variable declared outside a function, becomes GLOBAL.
 // A global variable has global scope: All scripts and functions on a web page can access it.
+
+
+// function test1() {
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('Function Scope: ', a, b, c);
+// }
+
+if (true) {
+    // Block Scope
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('If Scope: ', a, b, c);
+}
+
+const company = function () {
+    // Block Scope
+    var a = 4;
+    let b = 5;
+    const c = 6;
+    console.log('Function Scope: ', a, b, c);
+}
+company(); 
+
+
