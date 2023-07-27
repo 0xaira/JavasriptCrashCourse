@@ -20,23 +20,23 @@ myCar.color = "blue";
 console.log(myCar.color); 
 
 //Objects inside Objects
-// let myCar2 = new Object();
-// myCar2.make = "Ford";
-// myCar2.model = "Mustang";
-// myCar2.year = 1969;
-// myCar2.color = "red";
-// myCar2.engine = new Object();
-// myCar2.engine.size = 5.0;
-// myCar2.engine.make = "bmw";
-// myCar2.engine.fuel = "petrol";
-// myCar2.engine.pistons = new Array();
-// myCar2.engine.pistons[0] = new Object();
-// myCar2.engine.pistons[0].maker = "BMW";
-// myCar2.engine.pistons[1] = new Object();
-// myCar2.engine.pistons[1].maker = "BMW2";
-// console.log(myCar2);
-// console.log(myCar2.engine.pistons[0].maker);
-// console.log(myCar2.engine.pistons[1].maker);
+let myCar2 = new Object();
+myCar2.make = "Ford";
+myCar2.model = "Mustang";
+myCar2.year = 1969;
+myCar2.color = "red";
+myCar2.engine = new Object();
+myCar2.engine.size = 5.0;
+myCar2.engine.make = "bmw";
+myCar2.engine.fuel = "petrol";
+myCar2.engine.pistons = new Array();
+myCar2.engine.pistons[0] = new Object();
+myCar2.engine.pistons[0].maker = "BMW";
+myCar2.engine.pistons[1] = new Object();
+myCar2.engine.pistons[1].maker = "BMW2";
+console.log(myCar2);
+console.log(myCar2.engine.pistons[0].maker);
+console.log(myCar2.engine.pistons[1].maker);
 
 //Obkects inside Objects non singleton
  let marvel_heros = new Object();
@@ -70,5 +70,19 @@ console.log(myCar.color);
     console.log(heros);
     console.log(heros.marvel.thor);
     console.log(heros.dc.superman);
+
+const obj1={ a:1, b:2, c:3 };
+const obj2={ d:4, e:5, f:6 };
+const obj3= Object.assign({},obj1, obj2);
+console.log(obj3);
+const obj4= {...obj1, ...obj2};
+console.log(obj4);
+const obj5= {...obj1, ...obj2, ...obj3};
+console.log(obj5);
+
+console.log(Object.keys(marvel_heros));
+console.log(Object.values(marvel_heros));
+console.log(Object.entries(marvel_heros));
+console.log(dc_heros.hasOwnProperty('superman'));
 
 
