@@ -48,3 +48,12 @@ a.addEventListener('click', function (){
 })
 
 
+
+let b = document.querySelector("h2");
+b.innerHTML = "<em>Hello World</em>";
+console.log(b.innerHTML);
+b.style.color = "lavender";
+b.style.backgroundColor = "black";
+b.style.fontSize = "50px";
+b.style.border = "2px solid black";
+b.style.padding = "10px";
