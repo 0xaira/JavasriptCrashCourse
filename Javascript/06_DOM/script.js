@@ -38,3 +38,5 @@
 // var head = document.querySelector("h1");
 // console.log(head);
 
+// NodeList and HTMLCollection
+// NodeList is a list of nodes and HTMLCollection is a list of elements
