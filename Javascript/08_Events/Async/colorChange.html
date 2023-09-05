@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Testing</h1>
+    <button id="btn">Start</button>
+    <button id="btn1">Stop</button>
+    <script>
+        const btn = document.getElementById('btn');
+        const btn1 = document.getElementById('btn1');
+        let intervalId;
+        btn.addEventListener('click', () => {
+            intervalId = setInterval(() => {
+                document.body.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+            }, 1000);
+        });
+        btn1.addEventListener('click', () => {
+            clearInterval(intervalId);
+        });
+    </script>
+</html>
