@@ -1,3 +1,10 @@
+//What is DOM?
+// Document Object Model
+// It is a tree like structure that represents the HTML document
+// It is used to connect webpages to scripts like Javascript
+// It is used to manipulate the HTML elements with Javascript
+
+
 // 4 Pillars of DOM 
 
 // 1. Selection of an element
@@ -5,55 +12,22 @@
 // 3. Changing the style of an element
 // 4. Event Listener
 
-let a = document.querySelector("h1");
-a.innerHTML = "<em>Hello World</em>";
-console.log(a.innerHTML);
-a.style.color = "lavender";
-a.style.backgroundColor = "black";
-a.style.fontSize = "50px";
-a.style.border = "2px solid black";
-a.style.padding = "10px";
-a.style.margin = "10px";
-a.style.textAlign = "center";
-a.style.fontFamily = "sans-serif";
-a.style.fontWeight = "bold";
-a.style.borderRadius = "10px";
-a.style.boxShadow = "0 0 10px black";
-a.style.textShadow = "0 0 10px black";
-a.style.width = "50%";
-a.style.display = "inline-block";
-a.style.verticalAlign = "middle";
-a.style.lineHeight = "100px";
+document.querySelector('h1');  // Selects the first h1 element
+document.querySelector('h1').innerHTML = 'New Title'; // Changes the HTML of the first h1 element
+document.querySelector('h1').style.color = 'blue'; // Changes the style of the first h1 element
+document.querySelector('h1').style.fontSize = '5rem';  
+document.querySelector('h1').style.backgroundColor = 'yellow'; 
+
+// Selecting multiple elements
+document.querySelectorAll('h1'); // Selects all the h1 elements
+document.querySelectorAll('h1')[0].style.color = 'blue'; // Changes the style of the first h1 element
+
+//Event Listener
+document.querySelector('h1').addEventListener('click', function(){
+    alert('I was clicked');
+});
 
 
 
-a.addEventListener('click', function (){
-    a.innerHTML = "<em>Hello India</em>";
-    a.style.color = "Green";
-    a.style.backgroundColor = "orange";
-    a.style.fontSize = "50px";
-    a.style.border = "2px solid black";
-    a.style.padding = "10px";
-    a.style.margin = "10px";
-    a.style.textAlign = "center";
-    a.style.fontFamily = "sans-serif";
-    a.style.fontWeight = "bold";
-    a.style.borderRadius = "10px";
-    a.style.boxShadow = "0 0 10px black";
-    a.style.textShadow = "0 0 10px black";
-    a.style.width = "50%";
-    a.style.display = "inline-block";
-    a.style.verticalAlign = "middle";
-    a.style.lineHeight = "100px";
-})
 
 
-
-let b = document.querySelector("h2");
-b.innerHTML = "<em>Hello World</em>";
-console.log(b.innerHTML);
-b.style.color = "lavender";
-b.style.backgroundColor = "black";
-b.style.fontSize = "50px";
-b.style.border = "2px solid black";
-b.style.padding = "10px";
