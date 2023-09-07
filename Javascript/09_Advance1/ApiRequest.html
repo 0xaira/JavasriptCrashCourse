@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const xhr = new XMLHttpRequest(); // xhr is an object
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1'); // open() is a method of xhr object and it takes two arguments (1. type of request, 2. url)
+        xhr.responseType = 'json'; // responseType is a property of xhr object and it takes one argument (type of response)
+        xhr.onload = () => {
+            console.log(xhr.response); // response is a property of xhr object
+        };
+        xhr.send(); // send() is a method of xhr object and it takes no argument (it sends the request) 
+    </script>
+</body>
+</html>
+
+
+<!-- V8 Engine is an open source JavaScript engine developed by Google for the Google Chrome web browser. It is written in C++. It is used for both client side and server side scripting. It is also used in Couchbase, MongoDB and Node.js. It is also used in Chromium, the browser engine of the Opera web browser, and in parts of Qt. -->
+

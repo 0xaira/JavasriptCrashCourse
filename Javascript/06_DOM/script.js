@@ -3,18 +3,7 @@
 // var head = document.getElementById("heading");
 // console.log(head);
 // head.style.color = "red";
-// head.style.backgroundColor = "yellow";
-// head.style.fontSize = "50px";
-// head.style.border = "2px solid black";
-// head.style.padding = "10px";
-// head.style.margin = "10px";
-// head.style.textAlign = "center";
-// head.style.fontFamily = "sans-serif";
-// head.style.fontWeight = "bold";
-// head.style.borderRadius = "10px";
-// head.style.boxShadow = "0 0 10px black";
-// head.style.textShadow = "0 0 10px black";
-// head.style.width = "50%";
+
 
 //Differnece between innerText and innerContent
 
@@ -40,3 +29,20 @@
 
 // NodeList and HTMLCollection
 // NodeList is a list of nodes and HTMLCollection is a list of elements
+//queryselectorAll will return a NodeList and getElementsByClassName will return a HTMLCollection
+//forEach method will work on NodeList but not on HTMLCollection
+
+//Convert HTMLCollection to Array
+
+var head = document.getElementsByClassName("heading");
+console.log(head);
+var arr = Array.from(head);
+console.log(arr);
+
+var head = document.querySelectorAll(".heading");
+console.log(head);
+head.forEach(function (el) {
+    console.log(el);
+});
+
+
