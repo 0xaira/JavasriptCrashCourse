@@ -1,4 +1,4 @@
-//Promises 
+//Promises
 //Promises are used to handle asynchronous operations in JavaScript.
 //They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code.
 //Prior to promises events and callback functions were used but they had limited functionalities and created unmanageable code.
@@ -21,13 +21,93 @@
 //  // promise description
 //});
 
-//Example:
-let promise = new Promise(function(resolve, reject) {
- let a = 1 + 1;
- if(a == 2) {
-   resolve('Success');
- } else {
-   reject('Failed');
- }
+//Example: Promise is created and consumed after 2 seconds
+// Do an async Task, like Db calls, API calls, crytograpgy, network calls, etc
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Promise is created");
+    resolve("Promise is created and consumed");
+  }, 2000);
 });
+
+promise1.then((res) => {
+  console.log(res);
+  console.log("Promise is consumed");
+});
+
+// Another way directly
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Promise is created");
+    resolve("Promise is created and consumed");
+  }, 2000);
+}).then((res) => {
+  console.log(res);
+  console.log("Promise is consumed");
+});
+
+const promise3 = new Promise(function (resolve, reject) {
+  setTimeout(() => {
+    let error = true;
+    if (!error) {
+      console.log("Promise is created");
+    } else {
+      reject("Promise is rejected");
+    }
+  }, 2000);
+});
+
+promise3.then((res) => {
+  console.log(res);
+  console.log("Promise is consumed");
+}).then((res) => {
+  console.log(res);
+}).catch((err) => {
+  console.log(err);
+}).finally(() => {
+  console.log("Promise is consumed");
+});
+
+// Async and Await
+// Async and await make promises easier to write
+
+const promise4 = new Promise(function(resolve, reject) {
+  setTimeout(() => {
+    let error = true;
+    if (!error) {
+      resolve({name: "Javascript", password: "123456"});
+    } else {
+      reject("Error: Something went wrong");
+    }
+  }, 2000);
+});
+
+async function myFunction() {
+  try{
+    const response= await promise4;
+    console.log(response);
+  }
+  catch(err){
+    console.log(err);
+  }
+}
+myFunction();
+
+async function getallUsers() {
+  try{
+    const response= await fetch('https://jsonplaceholder.typicode.com/users');
+    const data= await response.json();
+    console.log(data);
+  }
+  catch(err){
+    console.log(err);
+  }
+}
+getallUsers();
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((res)=> res.json())
+.then((data)=> console.log(data))
+.catch((err)=> console.log(err));
 
