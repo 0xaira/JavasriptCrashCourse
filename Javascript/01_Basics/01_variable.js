@@ -11,3 +11,5 @@ console.table({ account_name, accountID, accountBalance, accountActive, accountA
 Prefer not to use var
 because of issue in block scope and functional scope
 */
+
+/* var is function scoped while let is block scoped */

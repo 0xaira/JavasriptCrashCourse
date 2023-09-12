@@ -106,8 +106,11 @@ async function getallUsers() {
 }
 getallUsers();
 
-fetch('https://jsonplaceholder.typicode.com/users')
-.then((res)=> res.json())
-.then((data)=> console.log(data))
-.catch((err)=> console.log(err));
 
+
+const fetch = require('node-fetch');
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err));

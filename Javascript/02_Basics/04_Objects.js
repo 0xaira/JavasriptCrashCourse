@@ -7,6 +7,11 @@ const tinderProfile = {
 } 
 console.log(tinderProfile);
 
+//For in loop
+for (let key in tinderProfile) {
+    console.log(key, tinderProfile[key]);
+}
+
 //Creating Singleton Objects using new keyword
 let myCar = new Object();
 myCar.make = "Ford";

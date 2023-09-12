@@ -6,8 +6,8 @@
 //Use snake_case for function names
 //Use UPPERCASE for constants
 
-let name = "John Doe";
-let age = 30;
+let name = "Arsenic FTW";
+let age = 20;
 let isApproved = true;
 
 // number => 2 to power 53
