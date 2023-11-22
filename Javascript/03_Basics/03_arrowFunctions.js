@@ -32,6 +32,5 @@ console.log(sum(2, 3)); // Function Call
 const sum1 = (a, b) => a + b;   // Arrow Function
 console.log(sum1(2, 3)); // Function Call
 
-const sum2 = (a, b) => ({ a: a, b: b });   // Arrow Function
-console.log(sum2(2, 3)); // Function Call
+
 
