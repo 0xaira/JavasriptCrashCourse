@@ -113,9 +113,10 @@ Callback hell
 Basics of Promise
 Chaining of promise
 Fetch API
-0AsyncCustom Async Await without return st Error Handling using try catch method
+AsyncCustom Async Await without return st Error Handling using try catch method
 
-ES6
+ES6:-
+
 Array De-structuring
 Object De-structuring
 Spread Operator
@@ -125,9 +126,9 @@ Nullish coalescing operator
 for-of loop
 Enhanced Object Literals-shortcuts
 Optional Chaining
-0Looping Objects
-09Sets
-09Map Intro And Map Iteration
+Looping Objects
+Sets
+Map Intro And Map Iteration
 
 
 */
