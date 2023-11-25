@@ -61,10 +61,13 @@ New keyword is used to create an object of a class.
 
 This Keyword: It belongs to the caliing site(from where the function or class is called).
 
-Objects are going to be linked to thier Prototypes.
+
 
 Prototypes: It is a mechanism by which javascript objects inherit features from one another.
-every object have prototype property with itslef.Protype is itslef an object.
+Every object have prototype property with itself. Protype is itself an object.
+Objects are going to be linked to thier Prototypes. We can add properties and methods to the prototype of an object after the object is created.
+
+__proto__ : It is a property of an object which points to the prototype of that object.
 
 
 

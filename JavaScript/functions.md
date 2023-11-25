@@ -2,9 +2,9 @@
 
 ## Functions
 A function is a reusable block of code that performs a specific task. It can be defined using the `function` keyword.
-### Function Declaration
+### Function Declaration/Statement
 
-Function declarations define a named function:
+Function declarations define a named function:They are hoisted
 
 ```js
 function sum(a, b) {
@@ -14,7 +14,7 @@ function sum(a, b) {
 
 ### Function Expression 
 
-Function expressions define an anonymous function:
+Function expressions define an anonymous function: Anonymous function are used in a place where fuctions are used as values. Function exoression are not hoisted
 
 ```js
 const sum = function(a, b) {
